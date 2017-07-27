@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Orb Wars</title>
+    <style>
+        body 
+        {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .hidden 
+        {
+            visibility: hidden;
+        }
+        #menu, #tutorial
+        {
+            position: absolute;
+            top: 25%; left: 25%;
+            width: 50%; height: 50%;
+            z-index: 1;
+            text-align: center;
+            background-color: gray;
+            border: thin solid blue;
+            border-radius: 50px;
+        }
+        #game
+        {
+            position: relative;
+            top: 0; left: 0;
+        }
+        #viewport
+        {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div id = "menu">
+        <h1>Orb Wars</h1>
+        <button onclick = "beginGame()">Singleplayer</button>
+        <button disabled = true>Multiplayer</button>
+        <button onclick = "openTutorial()">Tutorial</button>
+    </div>
+    <div id = "tutorial", class = hidden>
+        <h1>How To Play</h1>
+        <button onclick = "closeTutorial()">Close</button>
+    </div>
+    
+    <canvas id = "viewport" width = "800" height = "600">
+    
+    <script src = "OrbWars.js"></script>
+    <script>beginGame()</script>
+</body>
+</html>
